@@ -1,0 +1,10 @@
+D:\samples\windowsforms\matching-game\net-windows\cs\MatchingGame.Logic\bin\Release\net9.0\MatchingGame.Logic.deps.json
+D:\samples\windowsforms\matching-game\net-windows\cs\MatchingGame.Logic\bin\Release\net9.0\MatchingGame.Logic.dll
+D:\samples\windowsforms\matching-game\net-windows\cs\MatchingGame.Logic\bin\Release\net9.0\MatchingGame.Logic.pdb
+D:\samples\windowsforms\matching-game\net-windows\cs\MatchingGame.Logic\obj\Release\net9.0\MatchingGame.Logic.GeneratedMSBuildEditorConfig.editorconfig
+D:\samples\windowsforms\matching-game\net-windows\cs\MatchingGame.Logic\obj\Release\net9.0\MatchingGame.Logic.csproj.CoreCompileInputs.cache
+D:\samples\windowsforms\matching-game\net-windows\cs\MatchingGame.Logic\obj\Release\net9.0\MatchingGame.Logic.sourcelink.json
+D:\samples\windowsforms\matching-game\net-windows\cs\MatchingGame.Logic\obj\Release\net9.0\MatchingGame.Logic.dll
+D:\samples\windowsforms\matching-game\net-windows\cs\MatchingGame.Logic\obj\Release\net9.0\refint\MatchingGame.Logic.dll
+D:\samples\windowsforms\matching-game\net-windows\cs\MatchingGame.Logic\obj\Release\net9.0\MatchingGame.Logic.pdb
+D:\samples\windowsforms\matching-game\net-windows\cs\MatchingGame.Logic\obj\Release\net9.0\ref\MatchingGame.Logic.dll

@@ -1,0 +1,138 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\v-gwei\\Downloads\\Winforms Samples\\MSIX-WindowsForms\\CoreWinFormsApp1\\CoreWinFormsApp1.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\v-gwei\\Downloads\\Winforms Samples\\MSIX-WindowsForms\\CoreWinFormsApp1\\CoreWinFormsApp1.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\v-gwei\\Downloads\\Winforms Samples\\MSIX-WindowsForms\\CoreWinFormsApp1\\CoreWinFormsApp1.csproj",
+        "projectName": "CoreWinFormsApp1",
+        "projectPath": "C:\\Users\\v-gwei\\Downloads\\Winforms Samples\\MSIX-WindowsForms\\CoreWinFormsApp1\\CoreWinFormsApp1.csproj",
+        "packagesPath": "C:\\Users\\v-gwei\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\v-gwei\\Downloads\\Winforms Samples\\MSIX-WindowsForms\\CoreWinFormsApp1\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\v-gwei\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0-windows"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://dotnetfeed.blob.core.windows.net/aspnet-aspnetcore-tooling/index.json": {},
+          "https://dotnetfeed.blob.core.windows.net/aspnet-aspnetcore/index.json": {},
+          "https://dotnetfeed.blob.core.windows.net/aspnet-entityframeworkcore/index.json": {},
+          "https://dotnetfeed.blob.core.windows.net/aspnet-extensions/index.json": {},
+          "https://dotnetfeed.blob.core.windows.net/dotnet-core/index.json": {},
+          "https://dotnetfeed.blob.core.windows.net/dotnet-windowsdesktop/index.json": {},
+          "https://grpc.jfrog.io/grpc/api/nuget/v3/grpc-nuget-dev": {},
+          "https://pkgs.dev.azure.com/dnceng/internal/_packaging/6.0.415-servicing.23480.16-shipping/nuget/v3/index.json": {},
+          "https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet9/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0-windows7.0": {
+            "targetAlias": "net6.0-windows",
+            "projectReferences": {
+              "C:\\Users\\v-gwei\\Downloads\\Winforms Samples\\MSIX-WindowsForms\\WindowsFormsApp1\\WindowsFormsApp1.csproj": {
+                "projectPath": "C:\\Users\\v-gwei\\Downloads\\Winforms Samples\\MSIX-WindowsForms\\WindowsFormsApp1\\WindowsFormsApp1.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net6.0-windows7.0": {
+          "targetAlias": "net6.0-windows",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.26, 6.0.26]"
+            },
+            {
+              "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
+              "version": "[6.0.26, 6.0.26]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[6.0.26, 6.0.26]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.26, 6.0.26]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Runtime.win-x64",
+              "version": "[6.0.26, 6.0.26]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.26, 6.0.26]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
+              "version": "[6.0.26, 6.0.26]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WindowsForms": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100-preview.1.24080.9\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "win-x64": {
+          "#import": []
+        }
+      }
+    },
+    "C:\\Users\\v-gwei\\Downloads\\Winforms Samples\\MSIX-WindowsForms\\WindowsFormsApp1\\WindowsFormsApp1.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\v-gwei\\Downloads\\Winforms Samples\\MSIX-WindowsForms\\WindowsFormsApp1\\WindowsFormsApp1.csproj",
+        "projectName": "WindowsFormsApp1",
+        "projectPath": "C:\\Users\\v-gwei\\Downloads\\Winforms Samples\\MSIX-WindowsForms\\WindowsFormsApp1\\WindowsFormsApp1.csproj",
+        "frameworks": {
+          "net48": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {}
+      }
+    }
+  }
+}

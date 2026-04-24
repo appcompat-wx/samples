@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "Wc8NW8pr4JlznL96nsQ93UXZJPqi8xwY+hbb+v4iZUeNl4w/Fu1JyJYRA4e18t2chdIpd+qfCM3dMeClpnFWwQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\v-gwei\\Downloads\\Winforms Samples\\MSIX-WindowsForms\\CoreWinFormsApp1\\CoreWinFormsApp1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\v-gwei\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.26\\microsoft.netcore.app.ref.6.0.26.nupkg.sha512",
+    "C:\\Users\\v-gwei\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\6.0.26\\microsoft.netcore.app.runtime.win-x64.6.0.26.nupkg.sha512",
+    "C:\\Users\\v-gwei\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.26\\microsoft.windowsdesktop.app.ref.6.0.26.nupkg.sha512",
+    "C:\\Users\\v-gwei\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\6.0.26\\microsoft.windowsdesktop.app.runtime.win-x64.6.0.26.nupkg.sha512",
+    "C:\\Users\\v-gwei\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.26\\microsoft.aspnetcore.app.ref.6.0.26.nupkg.sha512",
+    "C:\\Users\\v-gwei\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\6.0.26\\microsoft.aspnetcore.app.runtime.win-x64.6.0.26.nupkg.sha512",
+    "C:\\Users\\v-gwei\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.26\\microsoft.netcore.app.host.win-x64.6.0.26.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,106 +1,115 @@
-# .NET Samples
+# .NET Core 3.1 Windows Forms Samples
 
-![Markdownlint](https://github.com/dotnet/samples/workflows/Markdownlint/badge.svg) [![Snippets 5000](https://github.com/dotnet/samples/actions/workflows/build-validation.yml/badge.svg)](https://github.com/dotnet/samples/actions/workflows/build-validation.yml) [![target supported version](https://github.com/dotnet/samples/actions/workflows/version-sweep.yml/badge.svg)](https://github.com/dotnet/samples/actions/workflows/version-sweep.yml)
+With [.NET Core 3.1](https://github.com/dotnet/core-sdk#installers-and-binaries), you can build Windows Forms applications.
 
-This repo contains all the sample code that is part of any topic under
-the .NET documentation. There are several different projects that
-are organized in sub-folders. These sub-folders are organized similarly
-to the organization of the docs for .NET. Some of the articles will have more than one sample associated with them.
+## Why build Windows Forms applications on top of .NET Core
 
-The content team tracks issues for .NET documentation in the [dotnet/docs](https://github.com/dotnet/docs) and [dotnet/dotnet-api-docs](https://github.com/dotnet/dotnet-api-docs) repositories. Issues are turned off on this repository. File issues against existing samples and suggestions for new samples in those repositories. If you're not sure where, choose [dotnet/docs](https://github.com/dotnet/docs/issues). This process keeps the issues associated with the articles that explain the concepts for each sample. The best process is to file an issue from the feedback control at the bottom of each docs page:
+If you're new to .NET Core, here are a few resources to help you understand the advantages of .NET Core for building Windows applications:
 
-- For existing samples, file the issue on the page with the sample.
-- To suggest new samples, file the issue on the index page where you want to see the new sample.
+* [Blog: .NET Core 3 and Support for Windows Desktop Applications](https://devblogs.microsoft.com/dotnet/net-core-3-and-support-for-windows-desktop-applications/)
+* [Video: Modernizing Desktop Apps on Windows 10 with .NET Core 3.0 and much more](https://channel9.msdn.com/events/Build/2018/BRK3501?term=scott%20hunter&pubDate=year&lang-en=true)
 
-The code in this repository represents programs that demonstrate application or library scenarios. These samples often use more than one technology, feature, or toolkit. Each sample has a readme.md file that explains the sample and links to resources for more information.
+## Quality disclaimer
 
-Samples should be buildable projects. Those projects should build and
-run on the widest set of platforms possible for the given sample. In practice, that means building .NET Core-based console applications where possible. Samples that are specific to the web or a UI framework should add those tools as needed. Examples include web applications, mobile apps, WPF or Windows Forms apps, and so on.
+.NET Core 3 support for desktop development is in preview. There are early daily builds available supporting Windows Forms and WPF. You will likely encounter missing tools, bugs, and unexpected behavior. We do not recommend using this SDK and tools for building applications for production scenarios. We do recommend using this SDK and tools to evaluate your how easy it will be to migrate your existing applications, or if you're just interested in trying out the latest upcoming Windows development technology.
 
-We are working toward having a CI system in place for all code. When you make any updates to samples, make sure each update is part of a buildable
-project. Ideally, add tests for correctness on samples as well.
+## Samples in this repo
 
-## Building a sample
+| Sample Name | Description |
+| ----------- | ----------- |
+| [Hello World - shared source](helloworld-sharedsource) | This sample shows you how to share source between a .NET Framework Windows Forms application and a .NET Core Windows Forms application. Use this to get the full .NET Framework tooling experience while still building for .NET Core. |
+| [Matching Game](matching-game) | This sample demonstrates simple event handling and timers in a .NET Core 3 Windows Forms application |
+| [DataGridView Sample](datagridview) | This sample demonstrates DataGridView usage in .NET Core 3 |
+| [Graphics Sample](graphics) | This sample demonstrates using GDI+ APIs via the Graphics type in .NET Core 3 |
+| [Sudoku Sample](Sudoku) | This sample demonstrates creating a game using event handling and the Graphics type in .NET Core 3 |
+| [Conway's Game of Life Sample](Conway's-Game-of-Life) | This sample demonstrates creating a DataGridView extension to handle OnRowPrePaint and trapping Windows Messages to prevent a left mouse click in .NET Core 3 |
 
-Build any .NET Core sample using the .NET Core CLI, which is installed with [the .NET Core SDK](https://www.microsoft.com/net/download). Then run
-these commands from the CLI in the directory of any sample:
+## Getting Started
 
-```console
+### Prerequisites and getting the tools
+
+Visual Studio 2019 Version 16.5.0 Preview 2.0 or later from <https://visualstudio.microsoft.com/vs/preview>, selecting the **.NET desktop development** workload with the options: **.NET Framework 4.7.2 development tools** and **.NET Core 3.1 development tools**.
+
+Install the latest [.NET Core 3.1 SDK released or daily build](https://aka.ms/netcore3sdk) available in the [dotnet/code-sdk repo](https://github.com/dotnet/core-sdk).
+
+### Analyzing your application's for .NET Core 3.1 readiness
+
+If you want to first understand your existing applications readiness for targeting .NET Core 3.1 or later, you can run the .NET Portability Analyzer using the download link and instructions [here](https://devblogs.microsoft.com/dotnet/are-your-windows-forms-and-wpf-applications-ready-for-net-core-3-0/). This will produce a report that shows you API compatibility for each assembly that your application depends on.
+
+### Creating new .NET Core 3.1 or later Windows Forms applications
+
+To create a new application you can use the `dotnet new` command, using the new templates for Windows Forms.
+
+In your favorite console run:
+
+```cmd
+dotnet new winforms -o MyWinFormsApp
+cd MyWinFormsApp
 dotnet build
 dotnet run
 ```
 
-These will install any needed dependencies, build the project, and run
-the project respectively.
+### Enable Windows Forms designers
 
-Multi-project samples have instructions in their root directory in
-a `README.md` file.  
+The Windows Forms designer for .NET Core 3 in Visual Studio is in preview and must be enabled. To enable the designergo to **Tools** > **Options** > **Environment** > **Preview Features** and select the **Use the preview Windows Forms designer for .NET Core apps** option.
 
-Except where noted, all samples build from the command line on
-any platform supported by .NET Core. There are a few samples that are
-specific to Visual Studio and require Visual Studio 2017 or later. In
-addition, some samples show platform-specific features and will require
-a specific platform. Other samples and snippets require the .NET Framework
-and will run on Windows platforms, and will need the Developer Pack for
-the target Framework version.
+## Porting existing applications
 
-## Creating new samples
+>We recommend running the [APIPort tool](https://github.com/Microsoft/dotnet-apiport-ui/releases) first to determine if there are any APIs your application depends on that are missing with .NET Core.
 
-If you wish to add a code sample:
+There is no tooling available to help with project migration. In order to migrate your Windows Forms application, you will create a new project and manually port all of the elements defined in your original project. You will notice the new project is based on the simplified project format, and not everything is migrated.
 
-1. Your sample **must be part of a buildable project**. Where possible, the projects should build on all platforms supported by .NET Core. Exceptions to this are samples that demonstrate a platform-specific feature or platform-specific tool.
+### Migrate the head project
 
-2. Your sample should conform to the [runtime coding style](https://github.com/dotnet/runtime/blob/main/docs/coding-guidelines/coding-style.md) to maintain consistency.
+Ideally you should migrate all projects in your solution to target .NET Core 3.1 and/or .NET Standard 2.0. The first step to migrate will be to retarget the application's entry point (i.e., 'head' project) and maintain your existing references.
 
-    - Additionally, we prefer the use of `static` methods rather than instance methods when demonstrating something that doesn't require instantiating a new object.
+1. Start from a working Solution. You must be able to open the solution in Visual Studio and double check that you can build and run without any issues.
+2. If your solution also has server-side projects, such as ASP.NET, we recommend splitting your solution into different server and client solutions. For this effort, work with the client solution only.
+3. Add a new .NET Core 3.1 Windows Forms project to the solution. Adding this project to a sibling folder to your existing 'head' project will make it easier to port references later (using relative paths to other projects or assemblies in the solution)
+4. If your 'head' project uses NuGet packages, you must add the same NuGet packages to the new project. The new SDK-Style projects only support the PackageReference format for adding NuGet package references. If your existing project uses `packages.config`, you must migrate to the new format. You can use the Migrator Tool described [here](https://docs.microsoft.com/nuget/reference/migrate-packages-config-to-package-reference) to automate this process.
+5. Copy the `PackageReference` elements generated in the previous step from the original project into the new project's .csproj file.
+6. Copy the `ProjectReference` elements from the original project. Note: The new project format does not use the `Name` and `ProjectGuid` elements, so you can safely delete those.
+7. At this point it's a good idea to try and restore/build to make sure all dependencies are properly configured.
+8. [Link the files](#link-files-from-the-old-project) from your existing .NET Framework Windows Forms project to the .NET Core 3.1 Windows Forms project.
+9. **Optional** If you have difficulties with compiler linking, you can copy the project files from the .NET Framework Windows Forms project to the new .NET Core 3.1 Windows Forms project.
 
-3. Your sample should include **appropriate exception handling**. It should handle all exceptions that are likely to be thrown in the context of the sample. For example, a sample that calls the [Console.ReadLine](https://docs.microsoft.com/dotnet/api/system.console.readline) method to retrieve user input should use appropriate exception handling when the input string is passed as an argument to a method. Similarly, if your sample expects a method call to fail, the resulting exception must be handled. Always handle the specific exceptions thrown by the method, rather than base class exceptions such as [Exception](https://docs.microsoft.com/dotnet/api/system.exception) or [SystemException](https://docs.microsoft.com/dotnet/api/system.systemexception).
+    * C# files (files with the `.cs` extension) are included by default in the .csproj.
+    * Other project elements like `EmbeddedResources` can also use globbing.
 
-4. If your sample builds a standalone package, you must include the runtimes used by our CI build system, in addition to any runtimes used by your sample:
+### Migration tips
 
-    - `win7-x64`
-    - `win8-x64`
-    - `win81-x64`
-    - `ubuntu.16.04-x64`
+#### Configure assembly file generation
 
-We will have a CI system in place to build these projects shortly.
+Most existing projects include an `AssemblyInfo.cs` file in the Properties folder. The new project style uses a different approach and generates the same assembly attributes as part of the build process. To disable that behavior you can add the property:
 
-To create a sample:
+```xml
+<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+```
 
-1. File an [issue](https://github.com/dotnet/docs/issues) or add a comment to an existing one that you are working on it.
-2. Write the topic that explains the concepts demonstrated in your sample (example: `docs/standard/linq/where-clause.md`).
-3. Write your sample (example: *WhereClause-Sample1.cs*).
-4. Create a *Program.cs* with a Main entry point that calls your samples. If there is already one there, add the call to your sample:
+#### Include the Windows.Compatibility Pack
 
-    ```csharp
-    public class Program
-    {
-        public void Main(string[] args)
-        {
-            WhereClause1.QuerySyntaxExample();
+Not every framework assembly is available in the .NET Core base class library. Windows applications like Windows Forms and WPF could have dependencies that are not available in .NET Core or .NET Standard. Adding a reference to the [Windows Compatibility Pack](https://docs.microsoft.com/dotnet/core/porting/windows-compat-pack) will help reduce missing assembly dependencies as it includes several types that might be needed by your application.
 
-            // Add the method syntax as an example.
-            WhereClause1.MethodSyntaxExample();
-        }
-    }
-    ```
+```cmd
+dotnet add package Microsoft.Windows.Compatibility
+```
 
-5. Don't check in the solution file if it contains only one project.
+#### Link Files from the old project
 
-To build and run your sample:
+Visual Studio does not yet support designers and custom tools for .NET Core desktop development. You can keep your files in the original project and link the generated files to the new project by using the link attribute in the project elements, e.g. `<Compile Link="" />`. See the [sample](helloworld-sharedsource) in this repo for an example of this.
 
-1. Go to the sample folder and build to check for errors:
+#### Migrating WCF clients
 
-    ```console
-    dotnet build
-    ```
+.NET Core has its own implementation of `System.ServiceModel` with some differences:
 
-2. Run your sample:
+* It's available as NuGet packages (also included in the Windows Compatibility Pack).
+* There are [unsupported features](https://github.com/dotnet/wcf/blob/main/release-notes/SupportedFeatures-v2.1.0.md) that you should review.
+* The binding and endpoint address must be specified in the service client constructor. Otherwise, if you reuse the ServiceReference created by Visual Studio, you may get the following error: `System.PlatformNotSupportedException: 'Configuration files are not supported.'`
 
-    ```console
-    dotnet run
-    ```
+## Filing issues and getting help
 
-3. Add a *README.md* to the root directory of your sample.
+You can file Windows Forms and WPF related issues in the [dotnet/core repo](https://github.com/dotnet/core/issues). If you are trying out WPF or Windows Forms development on top of .NET Core 3.1 and get stuck or have questions, reach out to <netcore3modernize@microsoft.com>.
 
-   This should include a brief description of the code, and refer people to the article that references the sample.
+### Known issues
+
+Take a look at the issues filed with the [WinForms area tag](https://github.com/dotnet/core/labels/area-winforms).

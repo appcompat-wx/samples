@@ -1,0 +1,9 @@
+C:\AppCompat\App Source\WinformsSamples\matching-game\net-windows\cs\MatchingGame.Logic\bin\Debug\net9.0\MatchingGame.Logic.deps.json
+C:\AppCompat\App Source\WinformsSamples\matching-game\net-windows\cs\MatchingGame.Logic\bin\Debug\net9.0\MatchingGame.Logic.dll
+C:\AppCompat\App Source\WinformsSamples\matching-game\net-windows\cs\MatchingGame.Logic\bin\Debug\net9.0\MatchingGame.Logic.pdb
+C:\AppCompat\App Source\WinformsSamples\matching-game\net-windows\cs\MatchingGame.Logic\obj\Debug\net9.0\MatchingGame.Logic.GeneratedMSBuildEditorConfig.editorconfig
+C:\AppCompat\App Source\WinformsSamples\matching-game\net-windows\cs\MatchingGame.Logic\obj\Debug\net9.0\MatchingGame.Logic.csproj.CoreCompileInputs.cache
+C:\AppCompat\App Source\WinformsSamples\matching-game\net-windows\cs\MatchingGame.Logic\obj\Debug\net9.0\MatchingGame.Logic.dll
+C:\AppCompat\App Source\WinformsSamples\matching-game\net-windows\cs\MatchingGame.Logic\obj\Debug\net9.0\refint\MatchingGame.Logic.dll
+C:\AppCompat\App Source\WinformsSamples\matching-game\net-windows\cs\MatchingGame.Logic\obj\Debug\net9.0\MatchingGame.Logic.pdb
+C:\AppCompat\App Source\WinformsSamples\matching-game\net-windows\cs\MatchingGame.Logic\obj\Debug\net9.0\ref\MatchingGame.Logic.dll
